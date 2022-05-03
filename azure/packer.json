@@ -1,0 +1,32 @@
+{
+    "builders":[{
+        "type": "azure-arm",
+
+
+        "client_id": "{{user `client_id`}}",
+        "client_secret": "{{user `client_secret`}}", 
+        "tenant_id":"{{user `tenant_id`}}",
+        "subscription_id": "{{user `tenant_id`}}",
+
+        "managed_image_resource_group_name": "packer_resource",
+        "managed_image_name": "{{user `image-name`}}",
+
+        "os_type": "{{user `os-type`}}",
+        "image_publisher": "{{user `image-publisher`}}",
+        "image_offer": "{{user `image-offer`}}",
+        "image_sku": "{{user `image-sku`}}",
+        "location": "{{user `location`}}",
+        "vm_size": "{{user `vm-size`}}"
+
+    }],
+
+    "provisioners": [
+        {
+            "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'",
+            "inline": [
+                "sudo apt-get update",
+                "sudo apt-get upgrade -y"
+            ]
+        }
+    ]
+}

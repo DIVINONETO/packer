@@ -1,0 +1,8 @@
+{
+    "name": "project",
+    "region": "us-east-2",
+    "type": "desenvolvimento",
+    "instance_type": "t2.medium",
+    "owners": "099720109477",
+    "image_name": "ubuntu/images/*ubuntu-bionic-18.04-amd64-server-*"
+}

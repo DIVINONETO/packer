@@ -1,0 +1,16 @@
+{ 
+    "client_secret": "",
+    "client_id": "",
+    "tenant_id": "",
+    "subscription_id": "",
+    "image-name": "MyPackerImage",
+
+    "os-type": "Linux",
+    "image-publisher": "Canonical",
+    "image-offer": "UbuntuServer",
+    "image-sku": "19_10-daily-gen2",
+    "location": "East US",
+    "vm-size:": "Standard_B2s"
+
+
+}
